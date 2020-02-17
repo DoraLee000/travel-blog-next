@@ -1,5 +1,5 @@
 
-import { Card ,Tag  } from 'antd';
+import { Card ,Tag  } from './node_modules/antd';
 import { Link } from '../routes'
 import "../assets/styles.less";
 
