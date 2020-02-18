@@ -51,10 +51,22 @@ a {
     margin-right: 10px;
   }
   .content-ellipsis{
-    overflow : hidden;
-  text-overflow : ellipsis;
-  white-space : nowrap;
-  height : 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+  }
+  .ant-card-cover{
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    img{
+      position: absolute;
+      margin: auto 0;
+    }
+  }
+  .ant-card-body{
+    height: 150px;
   }
 }
 
