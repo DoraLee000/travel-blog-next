@@ -1,37 +1,33 @@
-
-import "../assets/styles.less";
-import { Col , Pagination  } from 'antd';
+import React from 'react';
+import { connect } from 'react-redux';
+// import { Pagination, BackTop } from 'antd';
 import Link from 'next/link'
-import Layout from '../components/Layout/layout'
-import Card from '../components/card';
-import { getPosts } from '../api/index';
-import { connect } from "react-redux";
+import CardList from '../components/card';
+import Pagination from '../components/pagination'
+import Layout from "../layout/Main";
 
-const IndexPage = (props) => {
-const { data,total } = props
-console.log(store)
-  return (
-  <Layout>
-      { data.map(view => (
-        <Col span={8} md={8} sm={12} xs={24} className="mb-50">
-          <Card key={view.id} post={view}/>
-        </Col>
-      ))}
-      <Pagination defaultCurrent={1} defaultPageSize={30} total={total}></Pagination>
-  </Layout>
-  )
+import { loadData } from '../store/actions'
+import Counter from '../components/counter'
+
+class Index extends React.Component {
+  static async getInitialProps(props) {
+    const { store, isServer } = props.ctx
+    if (!store.getState().defultData) {
+      store.dispatch(loadData())
+    }
+    return { isServer }
+  }
+
+  render() {
+    return(
+      <Layout>
+        <Counter/>
+        <Pagination/>
+        <CardList title="Index Page"  />
+      </Layout>
+    ) 
+  }
 }
 
-
-IndexPage.getInitialProps = async ({ store, isServer, pathname, query }) => {
-  let page = 1;
-  const res = await getPosts(page);
-  const data = await res.json();
-  store.dispatch({ type: "GETDATA", payload: {...data} }); 
-  return { ...data , total: 443 }
-}
-
-
-export default connect()(IndexPage);
-
+export default connect()(Index)
 

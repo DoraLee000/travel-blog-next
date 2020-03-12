@@ -1,46 +1,31 @@
-import React from "react";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import App, { Container } from "next/app";
-import withRedux from "next-redux-wrapper";
+import App from 'next/app';
+import React from 'react';
+import { Provider } from 'react-redux';
+import withRedux from 'next-redux-wrapper';
+import withReduxSaga from 'next-redux-saga';
+// for all compontnts use
+import "../assets/styles.less";
 
-const initialState ={
-  views: [],
-}
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case 'GETDATA':
-            return {...state, views: action.payload };
-        default:
-            return state
-    }
-};
-
-const makeStore = (initialState, options) => {
-    return createStore(reducer, initialState);
-};
+import createStore from '../store/store';
 
 class MyApp extends App {
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {}
 
-    static async getInitialProps({Component, ctx}) {
-
-        // we can dispatch from here too
-        // ctx.store.dispatch({type: 'FOO', payload: 'f66o'});
-        const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
-        return { pageProps };
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps({ ctx })
     }
+    return { pageProps }
+  }
 
-    render() {
-        const {Component, pageProps, store ,router} = this.props;
-        return (
-            <Container>
-                <Provider store={store}>
-                    <Component {...pageProps} router={router}/>
-                </Provider>
-            </Container>
-        );
-    }
-
+  render() {
+    const { Component, pageProps, store, router } = this.props
+    return (
+      <Provider store={store}>
+        <Component {...pageProps} router={router} />
+      </Provider>
+    )
+  }
 }
 
-export default withRedux(makeStore)(MyApp);
+export default withRedux(createStore)(withReduxSaga(MyApp))

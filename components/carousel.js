@@ -1,5 +1,4 @@
 import { Carousel , Row , Col  } from 'antd';
-import "../assets/styles.less";
 const Index = () => {
   return(
     <Row justify="space-around" type="flex">
