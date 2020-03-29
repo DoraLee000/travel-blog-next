@@ -1,33 +1,31 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 // import { Pagination, BackTop } from 'antd';
-import Link from 'next/link'
-import CardList from '../components/card';
-import Pagination from '../components/pagination'
+import Link from "next/link";
+import CardList from "../components/card";
+import Pagination from "../components/pagination";
 import Layout from "../layout/Main";
 
-import { loadData } from '../store/actions'
-import Counter from '../components/counter'
+import { loadData } from "../store/actions";
+import Counter from "../components/counter";
 
-class Index extends React.Component {
-  static async getInitialProps(props) {
-    const { store, isServer } = props.ctx
-    if (!store.getState().defultData) {
-      store.dispatch(loadData())
-    }
-    return { isServer }
-  }
+const HomePage = () => {
+  return (
+    <Layout>
+      <Counter />
+      <Pagination />
+      <CardList title="Index Page" />
+    </Layout>
+  );
+};
 
-  render() {
-    return(
-      <Layout>
-        <Counter/>
-        <Pagination/>
-        <CardList title="Index Page"  />
-      </Layout>
-    ) 
-  }
-}
+HomePage.getInitialProps = props => {
+  const { store, isServer } = props.ctx;
+  // console.log(store.getState().defultData);
+  // if (!store.getState().defultData) {
+    store.dispatch(loadData());
+  // }
+  return { isServer };
+};
 
-export default connect()(Index)
-
+export default connect()(HomePage);

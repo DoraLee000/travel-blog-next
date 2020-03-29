@@ -1,27 +1,21 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
 /***/ "./api/index.js":
 /*!**********************!*\
   !*** ./api/index.js ***!
   \**********************/
-/*! exports provided: getPosts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPosts", function() { return getPosts; });
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__);
-
-var settings = {
-  headers: {
-    Accept: 'application/json'
-  }
-};
-function getPosts(page) {
-  return isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default()("https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=".concat(page), settings);
-}
-;
+// import fetch from 'isomorphic-fetch';
+// const settings = {
+//   headers: {
+//       Accept: 'application/json',
+//   }
+// };
+// export function getPosts (page) {
+//   return fetch(`https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=${page}`,settings)
+// };
 
 /***/ }),
 
@@ -48,8 +42,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd_lib_tag__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_tag__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../routes */ "./routes.js");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 
 
@@ -57,6 +51,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _jsxFileName = "/Users/serge/projects/spectrum-next/travel-blog-next/components/card.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
@@ -66,18 +61,31 @@ var CardModule = function CardModule(_ref) {
   var title = _ref.title,
       defultData = _ref.defultData;
   var Attractions = defultData || [];
-  return __jsx("div", null, Attractions.map(function (item) {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, Attractions.map(function (item) {
     return __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_1___default.a, {
       span: 8,
       md: 8,
       sm: 12,
       xs: 24,
-      className: "mb-50"
-    }, __jsx(_routes__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-      route: "view",
-      params: {
-        id: item.id
-      }
+      className: "mb-50",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      href: "/view/".concat(item.id),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
     }, __jsx(antd_lib_card__WEBPACK_IMPORTED_MODULE_3___default.a, {
       hoverable: true,
       key: item.id,
@@ -85,23 +93,74 @@ var CardModule = function CardModule(_ref) {
       className: "card mb-50 content-ellipsis",
       cover: __jsx("img", {
         alt: item.name,
-        src: item.images[0] ? item.images[0].src : ''
-      })
-    }, __jsx("ul", null, __jsx("li", {
-      className: "content-ellipsis"
+        src: item.images[0] ? item.images[0].src : '',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, __jsx("ul", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, __jsx("li", {
+      className: "content-ellipsis",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
     }, __jsx("span", {
-      className: "content-p"
+      className: "content-p",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
     }, "\u666F\u9EDE\u5730\u5740:"), item.address), __jsx("li", {
-      className: "content-ellipsis"
+      className: "content-ellipsis",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
     }, __jsx("span", {
-      className: "content-p"
+      className: "content-p",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
     }, "\u71DF\u696D\u6642\u9593:"), item.open_time ? item.open_time : '無'), __jsx("li", {
-      className: "content-ellipsis"
+      className: "content-ellipsis",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
     }, __jsx("span", {
-      className: "content-p"
+      className: "content-p",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
     }, "\u666F\u9EDE\u5206\u985E:"), item.category.map(function (e) {
       return __jsx(antd_lib_tag__WEBPACK_IMPORTED_MODULE_5___default.a, {
-        color: "magenta"
+        color: "magenta",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
       }, e.name);
     }))))));
   }));
@@ -243,7 +302,7 @@ function (_Component) {
         className: "jsx-2435724200"
       }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_7___default.a, {
         id: "2435724200"
-      }, "div.jsx-2435724200{padding:0 0 20px 0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6XFxEb3JhXFx0cmF2ZWwtYmxvZy1uZXh0XFxjb21wb25lbnRzXFxjb3VudGVyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXFCb0IsQUFHZ0MsbUJBQ3JCIiwiZmlsZSI6IkQ6XFxEb3JhXFx0cmF2ZWwtYmxvZy1uZXh0XFxjb21wb25lbnRzXFxjb3VudGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gJ3JlYWN0J1xyXG5pbXBvcnQgeyBjb25uZWN0IH0gZnJvbSAncmVhY3QtcmVkdXgnXHJcbmltcG9ydCB7IGluY3JlbWVudCwgZGVjcmVtZW50LCByZXNldCB9IGZyb20gJy4uL3N0b3JlL2FjdGlvbnMnXHJcblxyXG5jbGFzcyBDb3VudGVyIGV4dGVuZHMgQ29tcG9uZW50IHtcclxuICBpbmNyZW1lbnQgPSAoKSA9PiB7XHJcbiAgICB0aGlzLnByb3BzLmRpc3BhdGNoKGluY3JlbWVudCgpKVxyXG4gIH1cclxuXHJcbiAgZGVjcmVtZW50ID0gKCkgPT4ge1xyXG4gICAgdGhpcy5wcm9wcy5kaXNwYXRjaChkZWNyZW1lbnQoKSlcclxuICB9XHJcblxyXG4gIHJlc2V0ID0gKCkgPT4ge1xyXG4gICAgdGhpcy5wcm9wcy5kaXNwYXRjaChyZXNldCgpKVxyXG4gIH1cclxuXHJcbiAgcmVuZGVyKCkge1xyXG4gICAgY29uc3QgeyBjb3VudCB9ID0gdGhpcy5wcm9wc1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPGRpdj5cclxuICAgICAgICA8c3R5bGUganN4PntgXHJcbiAgICAgICAgICBkaXYge1xyXG4gICAgICAgICAgICBwYWRkaW5nOiAwIDAgMjBweCAwO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgIGB9PC9zdHlsZT5cclxuICAgICAgICA8aDE+XHJcbiAgICAgICAgICBDb3VudDogPHNwYW4+e2NvdW50fTwvc3Bhbj5cclxuICAgICAgICA8L2gxPlxyXG4gICAgICAgIDxidXR0b24gb25DbGljaz17dGhpcy5pbmNyZW1lbnR9PisxPC9idXR0b24+XHJcbiAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXt0aGlzLmRlY3JlbWVudH0+LTE8L2J1dHRvbj5cclxuICAgICAgICA8YnV0dG9uIG9uQ2xpY2s9e3RoaXMucmVzZXR9PlJlc2V0PC9idXR0b24+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgKVxyXG4gIH1cclxufVxyXG5cclxuY29uc3QgbWFwU3RhdGVUb1Byb3BzID0gKHsgY291bnQgfSkgPT4gKHsgY291bnQgfSlcclxuZXhwb3J0IGRlZmF1bHQgY29ubmVjdChtYXBTdGF0ZVRvUHJvcHMpKENvdW50ZXIpIl19 */\n/*@ sourceURL=D:\\\\Dora\\\\travel-blog-next\\\\components\\\\counter.js */"), __jsx("h1", {
+      }, "div.jsx-2435724200{padding:0 0 20px 0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zZXJnZS9wcm9qZWN0cy9zcGVjdHJ1bS1uZXh0L3RyYXZlbC1ibG9nLW5leHQvY29tcG9uZW50cy9jb3VudGVyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXFCb0IsQUFHZ0MsbUJBQ3JCIiwiZmlsZSI6Ii9Vc2Vycy9zZXJnZS9wcm9qZWN0cy9zcGVjdHJ1bS1uZXh0L3RyYXZlbC1ibG9nLW5leHQvY29tcG9uZW50cy9jb3VudGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IHsgY29ubmVjdCB9IGZyb20gJ3JlYWN0LXJlZHV4J1xuaW1wb3J0IHsgaW5jcmVtZW50LCBkZWNyZW1lbnQsIHJlc2V0IH0gZnJvbSAnLi4vc3RvcmUvYWN0aW9ucydcblxuY2xhc3MgQ291bnRlciBleHRlbmRzIENvbXBvbmVudCB7XG4gIGluY3JlbWVudCA9ICgpID0+IHtcbiAgICB0aGlzLnByb3BzLmRpc3BhdGNoKGluY3JlbWVudCgpKVxuICB9XG5cbiAgZGVjcmVtZW50ID0gKCkgPT4ge1xuICAgIHRoaXMucHJvcHMuZGlzcGF0Y2goZGVjcmVtZW50KCkpXG4gIH1cblxuICByZXNldCA9ICgpID0+IHtcbiAgICB0aGlzLnByb3BzLmRpc3BhdGNoKHJlc2V0KCkpXG4gIH1cblxuICByZW5kZXIoKSB7XG4gICAgY29uc3QgeyBjb3VudCB9ID0gdGhpcy5wcm9wc1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuICAgICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICAgZGl2IHtcbiAgICAgICAgICAgIHBhZGRpbmc6IDAgMCAyMHB4IDA7XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICAgIDxoMT5cbiAgICAgICAgICBDb3VudDogPHNwYW4+e2NvdW50fTwvc3Bhbj5cbiAgICAgICAgPC9oMT5cbiAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXt0aGlzLmluY3JlbWVudH0+KzE8L2J1dHRvbj5cbiAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXt0aGlzLmRlY3JlbWVudH0+LTE8L2J1dHRvbj5cbiAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXt0aGlzLnJlc2V0fT5SZXNldDwvYnV0dG9uPlxuICAgICAgPC9kaXY+XG4gICAgKVxuICB9XG59XG5cbmNvbnN0IG1hcFN0YXRlVG9Qcm9wcyA9ICh7IGNvdW50IH0pID0+ICh7IGNvdW50IH0pXG5leHBvcnQgZGVmYXVsdCBjb25uZWN0KG1hcFN0YXRlVG9Qcm9wcykoQ291bnRlcikiXX0= */\n/*@ sourceURL=/Users/serge/projects/spectrum-next/travel-blog-next/components/counter.js */"), __jsx("h1", {
         className: "jsx-2435724200"
       }, "Count: ", __jsx("span", {
         className: "jsx-2435724200"
@@ -443,6 +502,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/actions */ "./store/actions.js");
 /* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api/index */ "./api/index.js");
+/* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_api_index__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -17969,23 +18029,6 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 };
 
 module.exports = invariant;
-
-
-/***/ }),
-
-/***/ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/isomorphic-fetch/fetch-npm-browserify.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// the whatwg-fetch polyfill installs the fetch() function
-// on the global object (window or self)
-//
-// Return that as the export for use in Webpack, Browserify etc.
-__webpack_require__(/*! whatwg-fetch */ "./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js");
-module.exports = self.fetch.bind(self);
 
 
 /***/ }),
@@ -37129,715 +37172,6 @@ var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es
 
 /***/ }),
 
-/***/ "./node_modules/next-routes/dist/index.js":
-/*!************************************************!*\
-  !*** ./node_modules/next-routes/dist/index.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _pathToRegexp = _interopRequireDefault(__webpack_require__(/*! path-to-regexp */ "./node_modules/next-routes/node_modules/path-to-regexp/index.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _url = __webpack_require__(/*! url */ "./node_modules/native-url/dist/index.js");
-
-var _link = _interopRequireDefault(__webpack_require__(/*! next/link */ "./node_modules/next/link.js"));
-
-var _router = _interopRequireDefault(__webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-module.exports = function (opts) {
-  return new Routes(opts);
-};
-
-var Routes =
-/*#__PURE__*/
-function () {
-  function Routes() {
-    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-        _ref$Link = _ref.Link,
-        Link = _ref$Link === void 0 ? _link.default : _ref$Link,
-        _ref$Router = _ref.Router,
-        Router = _ref$Router === void 0 ? _router.default : _ref$Router;
-
-    _classCallCheck(this, Routes);
-
-    this.routes = [];
-    this.Link = this.getLink(Link);
-    this.Router = this.getRouter(Router);
-  }
-
-  _createClass(Routes, [{
-    key: "add",
-    value: function add(name, pattern, page) {
-      var options;
-
-      if (name instanceof Object) {
-        options = name;
-        name = options.name;
-      } else {
-        if (name[0] === '/') {
-          page = pattern;
-          pattern = name;
-          name = null;
-        }
-
-        options = {
-          name: name,
-          pattern: pattern,
-          page: page
-        };
-      }
-
-      if (this.findByName(name)) {
-        throw new Error("Route \"".concat(name, "\" already exists"));
-      }
-
-      this.routes.push(new Route(options));
-      return this;
-    }
-  }, {
-    key: "findByName",
-    value: function findByName(name) {
-      if (name) {
-        return this.routes.filter(function (route) {
-          return route.name === name;
-        })[0];
-      }
-    }
-  }, {
-    key: "match",
-    value: function match(url) {
-      var parsedUrl = (0, _url.parse)(url, true);
-      var pathname = parsedUrl.pathname,
-          query = parsedUrl.query;
-      return this.routes.reduce(function (result, route) {
-        if (result.route) return result;
-        var params = route.match(pathname);
-        if (!params) return result;
-        return _objectSpread({}, result, {
-          route: route,
-          params: params,
-          query: _objectSpread({}, query, params)
-        });
-      }, {
-        query: query,
-        parsedUrl: parsedUrl
-      });
-    }
-  }, {
-    key: "findAndGetUrls",
-    value: function findAndGetUrls(nameOrUrl, params) {
-      var route = this.findByName(nameOrUrl);
-
-      if (route) {
-        return {
-          route: route,
-          urls: route.getUrls(params),
-          byName: true
-        };
-      } else {
-        var _this$match = this.match(nameOrUrl),
-            _route = _this$match.route,
-            query = _this$match.query;
-
-        var href = _route ? _route.getHref(query) : nameOrUrl;
-        var urls = {
-          href: href,
-          as: nameOrUrl
-        };
-        return {
-          route: _route,
-          urls: urls
-        };
-      }
-    }
-  }, {
-    key: "getRequestHandler",
-    value: function getRequestHandler(app, customHandler) {
-      var _this = this;
-
-      var nextHandler = app.getRequestHandler();
-      return function (req, res) {
-        var _this$match2 = _this.match(req.url),
-            route = _this$match2.route,
-            query = _this$match2.query,
-            parsedUrl = _this$match2.parsedUrl;
-
-        if (route) {
-          if (customHandler) {
-            customHandler({
-              req: req,
-              res: res,
-              route: route,
-              query: query
-            });
-          } else {
-            app.render(req, res, route.page, query);
-          }
-        } else {
-          nextHandler(req, res, parsedUrl);
-        }
-      };
-    }
-  }, {
-    key: "getLink",
-    value: function getLink(Link) {
-      var _this2 = this;
-
-      var LinkRoutes = function LinkRoutes(props) {
-        var route = props.route,
-            params = props.params,
-            to = props.to,
-            newProps = _objectWithoutProperties(props, ["route", "params", "to"]);
-
-        var nameOrUrl = route || to;
-
-        if (nameOrUrl) {
-          Object.assign(newProps, _this2.findAndGetUrls(nameOrUrl, params).urls);
-        }
-
-        return _react.default.createElement(Link, newProps);
-      };
-
-      return LinkRoutes;
-    }
-  }, {
-    key: "getRouter",
-    value: function getRouter(Router) {
-      var _this3 = this;
-
-      var wrap = function wrap(method) {
-        return function (route, params, options) {
-          var _this3$findAndGetUrls = _this3.findAndGetUrls(route, params),
-              byName = _this3$findAndGetUrls.byName,
-              _this3$findAndGetUrls2 = _this3$findAndGetUrls.urls,
-              as = _this3$findAndGetUrls2.as,
-              href = _this3$findAndGetUrls2.href;
-
-          return Router[method](href, as, byName ? options : params);
-        };
-      };
-
-      Router.pushRoute = wrap('push');
-      Router.replaceRoute = wrap('replace');
-      Router.prefetchRoute = wrap('prefetch');
-      return Router;
-    }
-  }]);
-
-  return Routes;
-}();
-
-var Route =
-/*#__PURE__*/
-function () {
-  function Route(_ref2) {
-    var name = _ref2.name,
-        pattern = _ref2.pattern,
-        _ref2$page = _ref2.page,
-        page = _ref2$page === void 0 ? name : _ref2$page;
-
-    _classCallCheck(this, Route);
-
-    if (!name && !page) {
-      throw new Error("Missing page to render for route \"".concat(pattern, "\""));
-    }
-
-    this.name = name;
-    this.pattern = pattern || "/".concat(name);
-    this.page = page.replace(/(^|\/)index$/, '').replace(/^\/?/, '/');
-    this.regex = (0, _pathToRegexp.default)(this.pattern, this.keys = []);
-    this.keyNames = this.keys.map(function (key) {
-      return key.name;
-    });
-    this.toPath = _pathToRegexp.default.compile(this.pattern);
-  }
-
-  _createClass(Route, [{
-    key: "match",
-    value: function match(path) {
-      var values = this.regex.exec(path);
-
-      if (values) {
-        return this.valuesToParams(values.slice(1));
-      }
-    }
-  }, {
-    key: "valuesToParams",
-    value: function valuesToParams(values) {
-      var _this4 = this;
-
-      return values.reduce(function (params, val, i) {
-        if (val === undefined) return params;
-        return Object.assign(params, _defineProperty({}, _this4.keys[i].name, decodeURIComponent(val)));
-      }, {});
-    }
-  }, {
-    key: "getHref",
-    value: function getHref() {
-      var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      return "".concat(this.page, "?").concat(toQuerystring(params));
-    }
-  }, {
-    key: "getAs",
-    value: function getAs() {
-      var _this5 = this;
-
-      var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      var as = this.toPath(params) || '/';
-      var keys = Object.keys(params);
-      var qsKeys = keys.filter(function (key) {
-        return _this5.keyNames.indexOf(key) === -1;
-      });
-      if (!qsKeys.length) return as;
-      var qsParams = qsKeys.reduce(function (qs, key) {
-        return Object.assign(qs, _defineProperty({}, key, params[key]));
-      }, {});
-      return "".concat(as, "?").concat(toQuerystring(qsParams));
-    }
-  }, {
-    key: "getUrls",
-    value: function getUrls(params) {
-      var as = this.getAs(params);
-      var href = this.getHref(params);
-      return {
-        as: as,
-        href: href
-      };
-    }
-  }]);
-
-  return Route;
-}();
-
-var toQuerystring = function toQuerystring(obj) {
-  return Object.keys(obj).filter(function (key) {
-    return obj[key] !== null && obj[key] !== undefined;
-  }).map(function (key) {
-    var value = obj[key];
-
-    if (Array.isArray(value)) {
-      value = value.join('/');
-    }
-
-    return [encodeURIComponent(key), encodeURIComponent(value)].join('=');
-  }).join('&');
-};
-
-/***/ }),
-
-/***/ "./node_modules/next-routes/node_modules/path-to-regexp/index.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/next-routes/node_modules/path-to-regexp/index.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * Expose `pathToRegexp`.
- */
-module.exports = pathToRegexp
-module.exports.parse = parse
-module.exports.compile = compile
-module.exports.tokensToFunction = tokensToFunction
-module.exports.tokensToRegExp = tokensToRegExp
-
-/**
- * Default configs.
- */
-var DEFAULT_DELIMITER = '/'
-var DEFAULT_DELIMITERS = './'
-
-/**
- * The main path matching regexp utility.
- *
- * @type {RegExp}
- */
-var PATH_REGEXP = new RegExp([
-  // Match escaped characters that would otherwise appear in future matches.
-  // This allows the user to escape special characters that won't transform.
-  '(\\\\.)',
-  // Match Express-style parameters and un-named parameters with a prefix
-  // and optional suffixes. Matches appear as:
-  //
-  // ":test(\\d+)?" => ["test", "\d+", undefined, "?"]
-  // "(\\d+)"  => [undefined, undefined, "\d+", undefined]
-  '(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?'
-].join('|'), 'g')
-
-/**
- * Parse a string for the raw tokens.
- *
- * @param  {string}  str
- * @param  {Object=} options
- * @return {!Array}
- */
-function parse (str, options) {
-  var tokens = []
-  var key = 0
-  var index = 0
-  var path = ''
-  var defaultDelimiter = (options && options.delimiter) || DEFAULT_DELIMITER
-  var delimiters = (options && options.delimiters) || DEFAULT_DELIMITERS
-  var pathEscaped = false
-  var res
-
-  while ((res = PATH_REGEXP.exec(str)) !== null) {
-    var m = res[0]
-    var escaped = res[1]
-    var offset = res.index
-    path += str.slice(index, offset)
-    index = offset + m.length
-
-    // Ignore already escaped sequences.
-    if (escaped) {
-      path += escaped[1]
-      pathEscaped = true
-      continue
-    }
-
-    var prev = ''
-    var next = str[index]
-    var name = res[2]
-    var capture = res[3]
-    var group = res[4]
-    var modifier = res[5]
-
-    if (!pathEscaped && path.length) {
-      var k = path.length - 1
-
-      if (delimiters.indexOf(path[k]) > -1) {
-        prev = path[k]
-        path = path.slice(0, k)
-      }
-    }
-
-    // Push the current path onto the tokens.
-    if (path) {
-      tokens.push(path)
-      path = ''
-      pathEscaped = false
-    }
-
-    var partial = prev !== '' && next !== undefined && next !== prev
-    var repeat = modifier === '+' || modifier === '*'
-    var optional = modifier === '?' || modifier === '*'
-    var delimiter = prev || defaultDelimiter
-    var pattern = capture || group
-
-    tokens.push({
-      name: name || key++,
-      prefix: prev,
-      delimiter: delimiter,
-      optional: optional,
-      repeat: repeat,
-      partial: partial,
-      pattern: pattern ? escapeGroup(pattern) : '[^' + escapeString(delimiter) + ']+?'
-    })
-  }
-
-  // Push any remaining characters.
-  if (path || index < str.length) {
-    tokens.push(path + str.substr(index))
-  }
-
-  return tokens
-}
-
-/**
- * Compile a string to a template function for the path.
- *
- * @param  {string}             str
- * @param  {Object=}            options
- * @return {!function(Object=, Object=)}
- */
-function compile (str, options) {
-  return tokensToFunction(parse(str, options))
-}
-
-/**
- * Expose a method for transforming tokens into the path function.
- */
-function tokensToFunction (tokens) {
-  // Compile all the tokens into regexps.
-  var matches = new Array(tokens.length)
-
-  // Compile all the patterns before compilation.
-  for (var i = 0; i < tokens.length; i++) {
-    if (typeof tokens[i] === 'object') {
-      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$')
-    }
-  }
-
-  return function (data, options) {
-    var path = ''
-    var encode = (options && options.encode) || encodeURIComponent
-
-    for (var i = 0; i < tokens.length; i++) {
-      var token = tokens[i]
-
-      if (typeof token === 'string') {
-        path += token
-        continue
-      }
-
-      var value = data ? data[token.name] : undefined
-      var segment
-
-      if (Array.isArray(value)) {
-        if (!token.repeat) {
-          throw new TypeError('Expected "' + token.name + '" to not repeat, but got array')
-        }
-
-        if (value.length === 0) {
-          if (token.optional) continue
-
-          throw new TypeError('Expected "' + token.name + '" to not be empty')
-        }
-
-        for (var j = 0; j < value.length; j++) {
-          segment = encode(value[j], token)
-
-          if (!matches[i].test(segment)) {
-            throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '"')
-          }
-
-          path += (j === 0 ? token.prefix : token.delimiter) + segment
-        }
-
-        continue
-      }
-
-      if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
-        segment = encode(String(value), token)
-
-        if (!matches[i].test(segment)) {
-          throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but got "' + segment + '"')
-        }
-
-        path += token.prefix + segment
-        continue
-      }
-
-      if (token.optional) {
-        // Prepend partial segment prefixes.
-        if (token.partial) path += token.prefix
-
-        continue
-      }
-
-      throw new TypeError('Expected "' + token.name + '" to be ' + (token.repeat ? 'an array' : 'a string'))
-    }
-
-    return path
-  }
-}
-
-/**
- * Escape a regular expression string.
- *
- * @param  {string} str
- * @return {string}
- */
-function escapeString (str) {
-  return str.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1')
-}
-
-/**
- * Escape the capturing group by escaping special characters and meaning.
- *
- * @param  {string} group
- * @return {string}
- */
-function escapeGroup (group) {
-  return group.replace(/([=!:$/()])/g, '\\$1')
-}
-
-/**
- * Get the flags for a regexp from the options.
- *
- * @param  {Object} options
- * @return {string}
- */
-function flags (options) {
-  return options && options.sensitive ? '' : 'i'
-}
-
-/**
- * Pull out keys from a regexp.
- *
- * @param  {!RegExp} path
- * @param  {Array=}  keys
- * @return {!RegExp}
- */
-function regexpToRegexp (path, keys) {
-  if (!keys) return path
-
-  // Use a negative lookahead to match only capturing groups.
-  var groups = path.source.match(/\((?!\?)/g)
-
-  if (groups) {
-    for (var i = 0; i < groups.length; i++) {
-      keys.push({
-        name: i,
-        prefix: null,
-        delimiter: null,
-        optional: false,
-        repeat: false,
-        partial: false,
-        pattern: null
-      })
-    }
-  }
-
-  return path
-}
-
-/**
- * Transform an array into a regexp.
- *
- * @param  {!Array}  path
- * @param  {Array=}  keys
- * @param  {Object=} options
- * @return {!RegExp}
- */
-function arrayToRegexp (path, keys, options) {
-  var parts = []
-
-  for (var i = 0; i < path.length; i++) {
-    parts.push(pathToRegexp(path[i], keys, options).source)
-  }
-
-  return new RegExp('(?:' + parts.join('|') + ')', flags(options))
-}
-
-/**
- * Create a path regexp from string input.
- *
- * @param  {string}  path
- * @param  {Array=}  keys
- * @param  {Object=} options
- * @return {!RegExp}
- */
-function stringToRegexp (path, keys, options) {
-  return tokensToRegExp(parse(path, options), keys, options)
-}
-
-/**
- * Expose a function for taking tokens and returning a RegExp.
- *
- * @param  {!Array}  tokens
- * @param  {Array=}  keys
- * @param  {Object=} options
- * @return {!RegExp}
- */
-function tokensToRegExp (tokens, keys, options) {
-  options = options || {}
-
-  var strict = options.strict
-  var start = options.start !== false
-  var end = options.end !== false
-  var delimiter = escapeString(options.delimiter || DEFAULT_DELIMITER)
-  var delimiters = options.delimiters || DEFAULT_DELIMITERS
-  var endsWith = [].concat(options.endsWith || []).map(escapeString).concat('$').join('|')
-  var route = start ? '^' : ''
-  var isEndDelimited = tokens.length === 0
-
-  // Iterate over the tokens and create our regexp string.
-  for (var i = 0; i < tokens.length; i++) {
-    var token = tokens[i]
-
-    if (typeof token === 'string') {
-      route += escapeString(token)
-      isEndDelimited = i === tokens.length - 1 && delimiters.indexOf(token[token.length - 1]) > -1
-    } else {
-      var capture = token.repeat
-        ? '(?:' + token.pattern + ')(?:' + escapeString(token.delimiter) + '(?:' + token.pattern + '))*'
-        : token.pattern
-
-      if (keys) keys.push(token)
-
-      if (token.optional) {
-        if (token.partial) {
-          route += escapeString(token.prefix) + '(' + capture + ')?'
-        } else {
-          route += '(?:' + escapeString(token.prefix) + '(' + capture + '))?'
-        }
-      } else {
-        route += escapeString(token.prefix) + '(' + capture + ')'
-      }
-    }
-  }
-
-  if (end) {
-    if (!strict) route += '(?:' + delimiter + ')?'
-
-    route += endsWith === '$' ? '$' : '(?=' + endsWith + ')'
-  } else {
-    if (!strict) route += '(?:' + delimiter + '(?=' + endsWith + '))?'
-    if (!isEndDelimited) route += '(?=' + delimiter + '|' + endsWith + ')'
-  }
-
-  return new RegExp(route, flags(options))
-}
-
-/**
- * Normalize the given path string, returning a regular expression.
- *
- * An empty array can be passed in for the keys, which will hold the
- * placeholder key descriptions. For example, using `/user/:id`, `keys` will
- * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
- *
- * @param  {(string|RegExp|Array)} path
- * @param  {Array=}                keys
- * @param  {Object=}               options
- * @return {!RegExp}
- */
-function pathToRegexp (path, keys, options) {
-  if (path instanceof RegExp) {
-    return regexpToRegexp(path, keys)
-  }
-
-  if (Array.isArray(path)) {
-    return arrayToRegexp(/** @type {!Array} */ (path), keys, options)
-  }
-
-  return stringToRegexp(/** @type {string} */ (path), keys, options)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals self */exports.Headers=self.Headers;exports.Request=self.Request;exports.Response=self.Response;exports.fetch=self.fetch;
-
-/***/ }),
-
 /***/ "./node_modules/next/dist/build/polyfills/object-assign.js":
 /*!***********************************************************************************************************************!*\
   !*** delegated ./node_modules/next/dist/build/polyfills/object-assign.js from dll-reference dll_5f137288facb1107b491 ***!
@@ -37861,10 +37195,10 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CDora%5Ctravel-blog-next%5Cpages%5Cindex.js!./":
-/*!**************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CDora%5Ctravel-blog-next%5Cpages%5Cindex.js ***!
-  \**************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fserge%2Fprojects%2Fspectrum-next%2Ftravel-blog-next%2Fpages%2Findex.js!./":
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fserge%2Fprojects%2Fspectrum-next%2Ftravel-blog-next%2Fpages%2Findex.js ***!
+  \**********************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -64244,30 +63578,18 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_card__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/card */ "./components/card.js");
-/* harmony import */ var _components_pagination__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/pagination */ "./components/pagination.js");
-/* harmony import */ var _layout_Main__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../layout/Main */ "./layout/Main.js");
-/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../store/actions */ "./store/actions.js");
-/* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/counter */ "./components/counter.js");
-
-
-
-
-
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/card */ "./components/card.js");
+/* harmony import */ var _components_pagination__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/pagination */ "./components/pagination.js");
+/* harmony import */ var _layout_Main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../layout/Main */ "./layout/Main.js");
+/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/actions */ "./store/actions.js");
+/* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/counter */ "./components/counter.js");
+var _jsxFileName = "/Users/serge/projects/spectrum-next/travel-blog-next/pages/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  // import { Pagination, BackTop } from 'antd';
 
@@ -64278,71 +63600,49 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 
 
-var Index =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Index, _React$Component);
+var HomePage = function HomePage() {
+  return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx(_components_counter__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }), __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }), __jsx(_components_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: "Index Page",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }));
+};
 
-  function Index() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Index);
+HomePage.getInitialProps = function (props) {
+  var _props$ctx = props.ctx,
+      store = _props$ctx.store,
+      isServer = _props$ctx.isServer; // console.log(store.getState().defultData);
+  // if (!store.getState().defultData) {
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Index).apply(this, arguments));
-  }
+  store.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_6__["loadData"])()); // }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Index, [{
-    key: "render",
-    value: function render() {
-      return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_11__["default"], null, __jsx(_components_counter__WEBPACK_IMPORTED_MODULE_13__["default"], null), __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_10__["default"], null), __jsx(_components_card__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        title: "Index Page"
-      }));
-    }
-  }], [{
-    key: "getInitialProps",
-    value: function getInitialProps(props) {
-      var _props$ctx, store, isServer;
+  return {
+    isServer: isServer
+  };
+};
 
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function getInitialProps$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _props$ctx = props.ctx, store = _props$ctx.store, isServer = _props$ctx.isServer;
-
-              if (!store.getState().defultData) {
-                store.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_12__["loadData"])());
-              }
-
-              return _context.abrupt("return", {
-                isServer: isServer
-              });
-
-            case 3:
-            case "end":
-              return _context.stop();
-          }
-        }
-      });
-    }
-  }]);
-
-  return Index;
-}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])()(Index));
-
-/***/ }),
-
-/***/ "./routes.js":
-/*!*******************!*\
-  !*** ./routes.js ***!
-  \*******************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var nextRoutes = __webpack_require__(/*! next-routes */ "./node_modules/next-routes/dist/index.js");
-
-var routes = module.exports = nextRoutes();
-routes.add('index', '/');
-routes.add('view', '/view/:id');
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])()(HomePage));
 
 /***/ }),
 
@@ -64413,13 +63713,13 @@ function loadDataSuccess(data) {
 /***/ }),
 
 /***/ 1:
-/*!******************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CDora%5Ctravel-blog-next%5Cpages%5Cindex.js ***!
-  \******************************************************************************************************************/
+/*!**************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fserge%2Fprojects%2Fspectrum-next%2Ftravel-blog-next%2Fpages%2Findex.js ***!
+  \**************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=D%3A%5CDora%5Ctravel-blog-next%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=D%3A%5CDora%5Ctravel-blog-next%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fserge%2Fprojects%2Fspectrum-next%2Ftravel-blog-next%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fserge%2Fprojects%2Fspectrum-next%2Ftravel-blog-next%2Fpages%2Findex.js!./");
 
 
 /***/ }),

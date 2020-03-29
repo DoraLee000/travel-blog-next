@@ -10,7 +10,7 @@ function* loadDataSaga() {
     //const res = yield fetch('https://jsonplaceholder.typicode.com/users')
     let project = yield select(getProject)
     console.log('project',project)
-    const res = yield getPosts()
+    const res = yield fetch(`/api/attractions`);
     const data = yield res.json()
     yield put(loadDataSuccess(data.data))
   } catch (err) {

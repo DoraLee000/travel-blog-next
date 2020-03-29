@@ -97,24 +97,18 @@ module.exports =
 /*!**********************!*\
   !*** ./api/index.js ***!
   \**********************/
-/*! exports provided: getPosts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPosts", function() { return getPosts; });
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! isomorphic-fetch */ "isomorphic-fetch");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__);
-
-const settings = {
-  headers: {
-    Accept: 'application/json'
-  }
-};
-function getPosts(page) {
-  return isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default()(`https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=${page}`, settings);
-}
-;
+// import fetch from 'isomorphic-fetch';
+// const settings = {
+//   headers: {
+//       Accept: 'application/json',
+//   }
+// };
+// export function getPosts (page) {
+//   return fetch(`https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=${page}`,settings)
+// };
 
 /***/ }),
 
@@ -141,8 +135,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd_lib_tag__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_tag__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../routes */ "./routes.js");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_8__);
 
@@ -151,6 +145,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _jsxFileName = "/Users/serge/projects/spectrum-next/travel-blog-next/components/card.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
@@ -161,17 +156,30 @@ const CardModule = ({
   defultData
 }) => {
   const Attractions = defultData || [];
-  return __jsx("div", null, Attractions.map(item => __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, Attractions.map(item => __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_1___default.a, {
     span: 8,
     md: 8,
     sm: 12,
     xs: 24,
-    className: "mb-50"
-  }, __jsx(_routes__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-    route: "view",
-    params: {
-      id: item.id
-    }
+    className: "mb-50",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    href: `/view/${item.id}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
   }, __jsx(antd_lib_card__WEBPACK_IMPORTED_MODULE_3___default.a, {
     hoverable: true,
     key: item.id,
@@ -179,22 +187,73 @@ const CardModule = ({
     className: "card mb-50 content-ellipsis",
     cover: __jsx("img", {
       alt: item.name,
-      src: item.images[0] ? item.images[0].src : ''
-    })
-  }, __jsx("ul", null, __jsx("li", {
-    className: "content-ellipsis"
+      src: item.images[0] ? item.images[0].src : '',
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: undefined
+    }),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx("li", {
+    className: "content-ellipsis",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
   }, __jsx("span", {
-    className: "content-p"
+    className: "content-p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
   }, "\u666F\u9EDE\u5730\u5740:"), item.address), __jsx("li", {
-    className: "content-ellipsis"
+    className: "content-ellipsis",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
   }, __jsx("span", {
-    className: "content-p"
+    className: "content-p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
   }, "\u71DF\u696D\u6642\u9593:"), item.open_time ? item.open_time : '無'), __jsx("li", {
-    className: "content-ellipsis"
+    className: "content-ellipsis",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: undefined
   }, __jsx("span", {
-    className: "content-p"
+    className: "content-p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
   }, "\u666F\u9EDE\u5206\u985E:"), item.category.map(e => __jsx(antd_lib_tag__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    color: "magenta"
+    color: "magenta",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
   }, e.name)))))))));
 };
 
@@ -305,7 +364,7 @@ class Counter extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
       className: "jsx-2435724200"
     }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
       id: "2435724200"
-    }, "div.jsx-2435724200{padding:0 0 20px 0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6XFxEb3JhXFx0cmF2ZWwtYmxvZy1uZXh0XFxjb21wb25lbnRzXFxjb3VudGVyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXFCb0IsQUFHZ0MsbUJBQ3JCIiwiZmlsZSI6IkQ6XFxEb3JhXFx0cmF2ZWwtYmxvZy1uZXh0XFxjb21wb25lbnRzXFxjb3VudGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gJ3JlYWN0J1xyXG5pbXBvcnQgeyBjb25uZWN0IH0gZnJvbSAncmVhY3QtcmVkdXgnXHJcbmltcG9ydCB7IGluY3JlbWVudCwgZGVjcmVtZW50LCByZXNldCB9IGZyb20gJy4uL3N0b3JlL2FjdGlvbnMnXHJcblxyXG5jbGFzcyBDb3VudGVyIGV4dGVuZHMgQ29tcG9uZW50IHtcclxuICBpbmNyZW1lbnQgPSAoKSA9PiB7XHJcbiAgICB0aGlzLnByb3BzLmRpc3BhdGNoKGluY3JlbWVudCgpKVxyXG4gIH1cclxuXHJcbiAgZGVjcmVtZW50ID0gKCkgPT4ge1xyXG4gICAgdGhpcy5wcm9wcy5kaXNwYXRjaChkZWNyZW1lbnQoKSlcclxuICB9XHJcblxyXG4gIHJlc2V0ID0gKCkgPT4ge1xyXG4gICAgdGhpcy5wcm9wcy5kaXNwYXRjaChyZXNldCgpKVxyXG4gIH1cclxuXHJcbiAgcmVuZGVyKCkge1xyXG4gICAgY29uc3QgeyBjb3VudCB9ID0gdGhpcy5wcm9wc1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPGRpdj5cclxuICAgICAgICA8c3R5bGUganN4PntgXHJcbiAgICAgICAgICBkaXYge1xyXG4gICAgICAgICAgICBwYWRkaW5nOiAwIDAgMjBweCAwO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgIGB9PC9zdHlsZT5cclxuICAgICAgICA8aDE+XHJcbiAgICAgICAgICBDb3VudDogPHNwYW4+e2NvdW50fTwvc3Bhbj5cclxuICAgICAgICA8L2gxPlxyXG4gICAgICAgIDxidXR0b24gb25DbGljaz17dGhpcy5pbmNyZW1lbnR9PisxPC9idXR0b24+XHJcbiAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXt0aGlzLmRlY3JlbWVudH0+LTE8L2J1dHRvbj5cclxuICAgICAgICA8YnV0dG9uIG9uQ2xpY2s9e3RoaXMucmVzZXR9PlJlc2V0PC9idXR0b24+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgKVxyXG4gIH1cclxufVxyXG5cclxuY29uc3QgbWFwU3RhdGVUb1Byb3BzID0gKHsgY291bnQgfSkgPT4gKHsgY291bnQgfSlcclxuZXhwb3J0IGRlZmF1bHQgY29ubmVjdChtYXBTdGF0ZVRvUHJvcHMpKENvdW50ZXIpIl19 */\n/*@ sourceURL=D:\\\\Dora\\\\travel-blog-next\\\\components\\\\counter.js */"), __jsx("h1", {
+    }, "div.jsx-2435724200{padding:0 0 20px 0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zZXJnZS9wcm9qZWN0cy9zcGVjdHJ1bS1uZXh0L3RyYXZlbC1ibG9nLW5leHQvY29tcG9uZW50cy9jb3VudGVyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXFCb0IsQUFHZ0MsbUJBQ3JCIiwiZmlsZSI6Ii9Vc2Vycy9zZXJnZS9wcm9qZWN0cy9zcGVjdHJ1bS1uZXh0L3RyYXZlbC1ibG9nLW5leHQvY29tcG9uZW50cy9jb3VudGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IHsgY29ubmVjdCB9IGZyb20gJ3JlYWN0LXJlZHV4J1xuaW1wb3J0IHsgaW5jcmVtZW50LCBkZWNyZW1lbnQsIHJlc2V0IH0gZnJvbSAnLi4vc3RvcmUvYWN0aW9ucydcblxuY2xhc3MgQ291bnRlciBleHRlbmRzIENvbXBvbmVudCB7XG4gIGluY3JlbWVudCA9ICgpID0+IHtcbiAgICB0aGlzLnByb3BzLmRpc3BhdGNoKGluY3JlbWVudCgpKVxuICB9XG5cbiAgZGVjcmVtZW50ID0gKCkgPT4ge1xuICAgIHRoaXMucHJvcHMuZGlzcGF0Y2goZGVjcmVtZW50KCkpXG4gIH1cblxuICByZXNldCA9ICgpID0+IHtcbiAgICB0aGlzLnByb3BzLmRpc3BhdGNoKHJlc2V0KCkpXG4gIH1cblxuICByZW5kZXIoKSB7XG4gICAgY29uc3QgeyBjb3VudCB9ID0gdGhpcy5wcm9wc1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuICAgICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICAgZGl2IHtcbiAgICAgICAgICAgIHBhZGRpbmc6IDAgMCAyMHB4IDA7XG4gICAgICAgICAgfVxuICAgICAgICBgfTwvc3R5bGU+XG4gICAgICAgIDxoMT5cbiAgICAgICAgICBDb3VudDogPHNwYW4+e2NvdW50fTwvc3Bhbj5cbiAgICAgICAgPC9oMT5cbiAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXt0aGlzLmluY3JlbWVudH0+KzE8L2J1dHRvbj5cbiAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXt0aGlzLmRlY3JlbWVudH0+LTE8L2J1dHRvbj5cbiAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXt0aGlzLnJlc2V0fT5SZXNldDwvYnV0dG9uPlxuICAgICAgPC9kaXY+XG4gICAgKVxuICB9XG59XG5cbmNvbnN0IG1hcFN0YXRlVG9Qcm9wcyA9ICh7IGNvdW50IH0pID0+ICh7IGNvdW50IH0pXG5leHBvcnQgZGVmYXVsdCBjb25uZWN0KG1hcFN0YXRlVG9Qcm9wcykoQ291bnRlcikiXX0= */\n/*@ sourceURL=/Users/serge/projects/spectrum-next/travel-blog-next/components/counter.js */"), __jsx("h1", {
       className: "jsx-2435724200"
     }, "Count: ", __jsx("span", {
       className: "jsx-2435724200"
@@ -507,6 +566,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/actions */ "./store/actions.js");
 /* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api/index */ "./api/index.js");
+/* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_api_index__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -2441,6 +2501,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_Main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../layout/Main */ "./layout/Main.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/actions */ "./store/actions.js");
 /* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/counter */ "./components/counter.js");
+var _jsxFileName = "/Users/serge/projects/spectrum-next/travel-blog-next/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  // import { Pagination, BackTop } from 'antd';
@@ -2452,46 +2513,50 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  static async getInitialProps(props) {
-    const {
-      store,
-      isServer
-    } = props.ctx;
+const HomePage = () => {
+  return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, __jsx(_components_counter__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }), __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }), __jsx(_components_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: "Index Page",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }));
+};
 
-    if (!store.getState().defultData) {
-      store.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_6__["loadData"])());
-    }
+HomePage.getInitialProps = props => {
+  const {
+    store,
+    isServer
+  } = props.ctx; // console.log(store.getState().defultData);
+  // if (!store.getState().defultData) {
 
-    return {
-      isServer
-    };
-  }
+  store.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_6__["loadData"])()); // }
 
-  render() {
-    return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_5__["default"], null, __jsx(_components_counter__WEBPACK_IMPORTED_MODULE_7__["default"], null), __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_4__["default"], null), __jsx(_components_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      title: "Index Page"
-    }));
-  }
+  return {
+    isServer
+  };
+};
 
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])()(Index));
-
-/***/ }),
-
-/***/ "./routes.js":
-/*!*******************!*\
-  !*** ./routes.js ***!
-  \*******************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-const nextRoutes = __webpack_require__(/*! next-routes */ "next-routes");
-
-const routes = module.exports = nextRoutes();
-routes.add('index', '/');
-routes.add('view', '/view/:id');
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])()(HomePage));
 
 /***/ }),
 
@@ -2568,7 +2633,7 @@ function loadDataSuccess(data) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Dora\travel-blog-next\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/serge/projects/spectrum-next/travel-blog-next/pages/index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -2878,28 +2943,6 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
-
-/***/ }),
-
-/***/ "isomorphic-fetch":
-/*!***********************************!*\
-  !*** external "isomorphic-fetch" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("isomorphic-fetch");
-
-/***/ }),
-
-/***/ "next-routes":
-/*!******************************!*\
-  !*** external "next-routes" ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next-routes");
 
 /***/ }),
 
