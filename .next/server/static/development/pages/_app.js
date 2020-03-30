@@ -2142,25 +2142,10 @@ function* loadDataSaga() {
   } catch (err) {
     yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])(Object(_actions__WEBPACK_IMPORTED_MODULE_2__["failure"])(err));
   }
-} // function* updateDataSaga() {
-//   console.log('Test Result:');
-//   try {
-//     const res = yield getPosts()
-//     // const res = yield fetch('https://jsonplaceholder.typicode.com/users')
-//     const data = yield res.json()
-//     console.log('data',data)
-//     // yield put(loadDataSuccess(data.data))
-//   } catch (err) {
-//     yield put(failure(err))
-//   }
-// }
-
+}
 
 function* rootSaga() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_actions__WEBPACK_IMPORTED_MODULE_2__["actionTypes"].LOAD_DATA, loadDataSaga), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_actions__WEBPACK_IMPORTED_MODULE_2__["actionTypes"].UPDATE_DATA, loadDataSaga)]); // yield [
-  //   takeEvery (actionTypes.LOAD_DATA, loadDataSaga),
-  //   takeEvery (actionTypes.UPDATE_DATA, loadDataSaga)
-  // ]
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_2__["actionTypes"].LOAD_DATA, loadDataSaga), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_actions__WEBPACK_IMPORTED_MODULE_2__["actionTypes"].UPDATE_DATA, loadDataSaga)]);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (rootSaga);

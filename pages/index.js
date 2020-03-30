@@ -19,13 +19,12 @@ class Index extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <Layout>
-        <Counter/>
-        <Pagination/>
-        <CardList title="Index Page"  />
+        <CardList title="Index Page" />
+        <Pagination />
       </Layout>
-    ) 
+    )
   }
 }
 
