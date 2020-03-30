@@ -7,12 +7,11 @@ import Pagination from "../components/pagination";
 import Layout from "../layout/Main";
 
 import { loadData } from "../store/actions";
-import Counter from "../components/counter";
+// import Counter from "../components/counter";
 
 const HomePage = () => {
   return (
     <Layout>
-      <Counter />
       <Pagination />
       <CardList title="Index Page" />
     </Layout>
