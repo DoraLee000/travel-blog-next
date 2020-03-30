@@ -30,10 +30,13 @@
       "static/css/styles.chunk.css",
       "static/chunks/styles.js",
       "static/runtime/main.js"
+<<<<<<< HEAD
     ],
     "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+=======
+>>>>>>> ae49e47ed3eeaa579b0bf4cfe55cbd4c2ef20091
     ]
   }
 }

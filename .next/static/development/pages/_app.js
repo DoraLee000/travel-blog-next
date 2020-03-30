@@ -1,27 +1,21 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\_app.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/_app.js"],{
 
 /***/ "./api/index.js":
 /*!**********************!*\
   !*** ./api/index.js ***!
   \**********************/
-/*! exports provided: getPosts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPosts", function() { return getPosts; });
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__);
-
-var settings = {
-  headers: {
-    Accept: 'application/json'
-  }
-};
-function getPosts(page) {
-  return isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default()("https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=".concat(page), settings);
-}
-;
+// import fetch from 'isomorphic-fetch';
+// const settings = {
+//   headers: {
+//       Accept: 'application/json',
+//   }
+// };
+// export function getPosts (page) {
+//   return fetch(`https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=${page}`,settings)
+// };
 
 /***/ }),
 
@@ -8057,23 +8051,6 @@ module.exports = invariant;
 
 /***/ }),
 
-/***/ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/isomorphic-fetch/fetch-npm-browserify.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// the whatwg-fetch polyfill installs the fetch() function
-// on the global object (window or self)
-//
-// Return that as the export for use in Webpack, Browserify etc.
-__webpack_require__(/*! whatwg-fetch */ "./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js");
-module.exports = self.fetch.bind(self);
-
-
-/***/ }),
-
 /***/ "./node_modules/native-url/dist/index.js":
 /*!***********************************************!*\
   !*** ./node_modules/native-url/dist/index.js ***!
@@ -8486,18 +8463,6 @@ var defaultConfig = {
 
 module.exports = __webpack_require__(/*! ./dist/pages/_app */ "./node_modules/next/dist/pages/_app.js")
 
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals self */exports.Headers=self.Headers;exports.Request=self.Request;exports.Response=self.Response;exports.fetch=self.fetch;
 
 /***/ }),
 
@@ -15058,6 +15023,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "./node_modules/redux-saga/dist/redux-saga-effects-npm-proxy.esm.js");
 /* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../api/index */ "./api/index.js");
+/* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_api_index__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ "./store/actions.js");
 
 
@@ -15089,7 +15055,7 @@ function loadDataSaga() {
           project = _context.sent;
           console.log('project', project);
           _context.next = 7;
-          return Object(_api_index__WEBPACK_IMPORTED_MODULE_2__["getPosts"])();
+          return fetch("/api/attractions");
 
         case 7:
           res = _context.sent;

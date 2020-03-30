@@ -1,5 +1,5 @@
 import { Card, Tag, Col  } from 'antd';
-import { Link } from '../routes';
+import Link from "next/link";
 import { connect } from 'react-redux';
 
 const CardModule = ({ title , defultData }) => {
@@ -7,8 +7,8 @@ const CardModule = ({ title , defultData }) => {
   return(
     <div>
       { Attractions.map(item => 
-        <Col span={8} md={8} sm={12} xs={24} className="mb-50">
-        <Link route='view' params={{ id: item.id }}>
+        (<Col span={8} md={8} sm={12} xs={24} className="mb-50">
+        <Link href={`/view/${item.id}`}>
           <Card
             hoverable
             key={ item.id }
@@ -29,7 +29,7 @@ const CardModule = ({ title , defultData }) => {
             </ul>
           </Card>
         </Link>
-        </Col>
+        </Col>)
         )}
     </div>
   )
