@@ -19,27 +19,13 @@ const HomePage = () => {
   );
 };
 
-<<<<<<< HEAD
-  render() {
-    return (
-      <Layout>
-        <CardList title="Index Page" />
-        <Pagination />
-      </Layout>
-    )
-  }
-}
-
-export default connect()(Index)
-=======
 HomePage.getInitialProps = props => {
   const { store, isServer } = props.ctx;
   // console.log(store.getState().defultData);
   // if (!store.getState().defultData) {
-    store.dispatch(loadData());
+  store.dispatch(loadData());
   // }
   return { isServer };
 };
->>>>>>> ae49e47ed3eeaa579b0bf4cfe55cbd4c2ef20091
 
 export default connect()(HomePage);
