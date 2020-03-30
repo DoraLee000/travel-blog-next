@@ -64292,9 +64292,9 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Index, [{
     key: "render",
     value: function render() {
-      return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_11__["default"], null, __jsx(_components_counter__WEBPACK_IMPORTED_MODULE_13__["default"], null), __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_10__["default"], null), __jsx(_components_card__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_11__["default"], null, __jsx(_components_card__WEBPACK_IMPORTED_MODULE_9__["default"], {
         title: "Index Page"
-      }));
+      }), __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_10__["default"], null));
     }
   }], [{
     key: "getInitialProps",

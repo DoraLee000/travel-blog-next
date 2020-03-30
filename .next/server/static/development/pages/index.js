@@ -2469,9 +2469,9 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
   }
 
   render() {
-    return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_5__["default"], null, __jsx(_components_counter__WEBPACK_IMPORTED_MODULE_7__["default"], null), __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_4__["default"], null), __jsx(_components_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_5__["default"], null, __jsx(_components_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
       title: "Index Page"
-    }));
+    }), __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_4__["default"], null));
   }
 
 }
