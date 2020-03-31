@@ -97,24 +97,18 @@ module.exports =
 /*!**********************!*\
   !*** ./api/index.js ***!
   \**********************/
-/*! exports provided: getPosts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPosts", function() { return getPosts; });
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! isomorphic-fetch */ "isomorphic-fetch");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__);
-
-const settings = {
-  headers: {
-    Accept: 'application/json'
-  }
-};
-function getPosts(page) {
-  return isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default()(`https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=${page}`, settings);
-}
-;
+// import fetch from 'isomorphic-fetch';
+// const settings = {
+//   headers: {
+//       Accept: 'application/json',
+//   }
+// };
+// export function getPosts (page) {
+//   return fetch(`https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=${page}`,settings)
+// };
 
 /***/ }),
 
@@ -2007,9 +2001,10 @@ function reset() {
     type: actionTypes.RESET
   };
 }
-function updateData() {
+function updateData(current) {
   return {
-    type: actionTypes.UPDATE_DATA
+    type: actionTypes.UPDATE_DATA,
+    current
   };
 }
 function loadData() {
@@ -2067,7 +2062,7 @@ const exampleInitialState = {
   count: 0,
   error: false,
   lastUpdate: 0,
-  current: 2,
+  current: 1,
   defultData: null
 };
 
@@ -2095,7 +2090,7 @@ function reducer(state = exampleInitialState, action) {
 
     case _actions__WEBPACK_IMPORTED_MODULE_7__["actionTypes"].UPDATE_DATA:
       return _objectSpread({}, state, {}, {
-        current: state.current + 1
+        current: action.current
       });
 
     case _actions__WEBPACK_IMPORTED_MODULE_7__["actionTypes"].LOAD_DATA_SUCCESS:
@@ -2116,45 +2111,36 @@ function reducer(state = exampleInitialState, action) {
 /*!***********************!*\
   !*** ./store/saga.js ***!
   \***********************/
-/*! exports provided: getProject, default */
+/*! exports provided: current, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProject", function() { return getProject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "current", function() { return current; });
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../api/index */ "./api/index.js");
+/* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_api_index__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions */ "./store/actions.js");
 
 
 
-const getProject = state => state.count;
+const current = state => state.current;
 
 function* loadDataSaga() {
   try {
     //const res = yield fetch('https://jsonplaceholder.typicode.com/users')
-    let project = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["select"])(getProject);
-    console.log('project', project);
-    const res = yield Object(_api_index__WEBPACK_IMPORTED_MODULE_1__["getPosts"])();
+    let currentNum = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["select"])(current);
+    console.log('project66', currentNum);
+    const res = yield fetch(`/api/attractions`, {
+      page: 6
+    });
     const data = yield res.json();
     yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])(Object(_actions__WEBPACK_IMPORTED_MODULE_2__["loadDataSuccess"])(data.data));
   } catch (err) {
     yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])(Object(_actions__WEBPACK_IMPORTED_MODULE_2__["failure"])(err));
   }
-} // function* updateDataSaga() {
-//   console.log('Test Result:');
-//   try {
-//     const res = yield getPosts()
-//     // const res = yield fetch('https://jsonplaceholder.typicode.com/users')
-//     const data = yield res.json()
-//     console.log('data',data)
-//     // yield put(loadDataSuccess(data.data))
-//   } catch (err) {
-//     yield put(failure(err))
-//   }
-// }
-
+}
 
 function* rootSaga() {
   yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_actions__WEBPACK_IMPORTED_MODULE_2__["actionTypes"].LOAD_DATA, loadDataSaga), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_actions__WEBPACK_IMPORTED_MODULE_2__["actionTypes"].UPDATE_DATA, loadDataSaga)]); // yield [
@@ -2351,17 +2337,6 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
-
-/***/ }),
-
-/***/ "isomorphic-fetch":
-/*!***********************************!*\
-  !*** external "isomorphic-fetch" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("isomorphic-fetch");
 
 /***/ }),
 

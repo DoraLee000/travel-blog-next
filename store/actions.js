@@ -27,8 +27,8 @@ export function reset() {
   return { type: actionTypes.RESET }
 }
 
-export function updateData() {
-  return { type: actionTypes.UPDATE_DATA }
+export function updateData(current) {
+  return { type: actionTypes.UPDATE_DATA , current }
 }
 
 export function loadData() {

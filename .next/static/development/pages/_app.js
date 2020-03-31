@@ -4,24 +4,18 @@
 /*!**********************!*\
   !*** ./api/index.js ***!
   \**********************/
-/*! exports provided: getPosts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPosts", function() { return getPosts; });
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__);
-
-var settings = {
-  headers: {
-    Accept: 'application/json'
-  }
-};
-function getPosts(page) {
-  return isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default()("https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=".concat(page), settings);
-}
-;
+// import fetch from 'isomorphic-fetch';
+// const settings = {
+//   headers: {
+//       Accept: 'application/json',
+//   }
+// };
+// export function getPosts (page) {
+//   return fetch(`https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=${page}`,settings)
+// };
 
 /***/ }),
 
@@ -8057,23 +8051,6 @@ module.exports = invariant;
 
 /***/ }),
 
-/***/ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/isomorphic-fetch/fetch-npm-browserify.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// the whatwg-fetch polyfill installs the fetch() function
-// on the global object (window or self)
-//
-// Return that as the export for use in Webpack, Browserify etc.
-__webpack_require__(/*! whatwg-fetch */ "./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js");
-module.exports = self.fetch.bind(self);
-
-
-/***/ }),
-
 /***/ "./node_modules/native-url/dist/index.js":
 /*!***********************************************!*\
   !*** ./node_modules/native-url/dist/index.js ***!
@@ -8486,18 +8463,6 @@ var defaultConfig = {
 
 module.exports = __webpack_require__(/*! ./dist/pages/_app */ "./node_modules/next/dist/pages/_app.js")
 
-
-/***/ }),
-
-/***/ "./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/next/dist/build/polyfills/fetch/whatwg-fetch.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* globals self */exports.Headers=self.Headers;exports.Request=self.Request;exports.Response=self.Response;exports.fetch=self.fetch;
 
 /***/ }),
 
@@ -14936,9 +14901,10 @@ function reset() {
     type: actionTypes.RESET
   };
 }
-function updateData() {
+function updateData(current) {
   return {
-    type: actionTypes.UPDATE_DATA
+    type: actionTypes.UPDATE_DATA,
+    current: current
   };
 }
 function loadData() {
@@ -14996,7 +14962,7 @@ var exampleInitialState = {
   count: 0,
   error: false,
   lastUpdate: 0,
-  current: 2,
+  current: 1,
   defultData: null
 };
 
@@ -15027,7 +14993,7 @@ function reducer() {
 
     case _actions__WEBPACK_IMPORTED_MODULE_7__["actionTypes"].UPDATE_DATA:
       return _objectSpread({}, state, {}, {
-        current: state.current + 1
+        current: action.current
       });
 
     case _actions__WEBPACK_IMPORTED_MODULE_7__["actionTypes"].LOAD_DATA_SUCCESS:
@@ -15048,16 +15014,17 @@ function reducer() {
 /*!***********************!*\
   !*** ./store/saga.js ***!
   \***********************/
-/*! exports provided: getProject, default */
+/*! exports provided: current, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProject", function() { return getProject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "current", function() { return current; });
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "./node_modules/redux-saga/dist/redux-saga-effects-npm-proxy.esm.js");
 /* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../api/index */ "./api/index.js");
+/* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_api_index__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ "./store/actions.js");
 
 
@@ -15071,25 +15038,27 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(r
 
 
 
-var getProject = function getProject(state) {
-  return state.count;
+var current = function current(state) {
+  return state.current;
 };
 
 function loadDataSaga() {
-  var project, res, data;
+  var currentNum, res, data;
   return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function loadDataSaga$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
           _context.prev = 0;
           _context.next = 3;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["select"])(getProject);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["select"])(current);
 
         case 3:
-          project = _context.sent;
-          console.log('project', project);
+          currentNum = _context.sent;
+          console.log('project66', currentNum);
           _context.next = 7;
-          return Object(_api_index__WEBPACK_IMPORTED_MODULE_2__["getPosts"])();
+          return fetch("/api/attractions", {
+            page: 6
+          });
 
         case 7:
           res = _context.sent;
@@ -15117,19 +15086,7 @@ function loadDataSaga() {
       }
     }
   }, _marked, null, [[0, 15]]);
-} // function* updateDataSaga() {
-//   console.log('Test Result:');
-//   try {
-//     const res = yield getPosts()
-//     // const res = yield fetch('https://jsonplaceholder.typicode.com/users')
-//     const data = yield res.json()
-//     console.log('data',data)
-//     // yield put(loadDataSuccess(data.data))
-//   } catch (err) {
-//     yield put(failure(err))
-//   }
-// }
-
+}
 
 function rootSaga() {
   return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function rootSaga$(_context2) {

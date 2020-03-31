@@ -4,7 +4,7 @@ export const exampleInitialState = {
   count: 0,
   error: false,
   lastUpdate: 0,
-  current:2,
+  current:1,
   defultData: null,
 }
 
@@ -37,7 +37,7 @@ function reducer(state = exampleInitialState, action) {
     case actionTypes.UPDATE_DATA:
       return {
         ...state,
-        ...{ current: state.current + 1 },
+        ...{ current: action.current },
       }
 
     case actionTypes.LOAD_DATA_SUCCESS:

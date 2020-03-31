@@ -97,24 +97,18 @@ module.exports =
 /*!**********************!*\
   !*** ./api/index.js ***!
   \**********************/
-/*! exports provided: getPosts */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPosts", function() { return getPosts; });
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! isomorphic-fetch */ "isomorphic-fetch");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0__);
-
-const settings = {
-  headers: {
-    Accept: 'application/json'
-  }
-};
-function getPosts(page) {
-  return isomorphic_fetch__WEBPACK_IMPORTED_MODULE_0___default()(`https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=${page}`, settings);
-}
-;
+// import fetch from 'isomorphic-fetch';
+// const settings = {
+//   headers: {
+//       Accept: 'application/json',
+//   }
+// };
+// export function getPosts (page) {
+//   return fetch(`https://www.travel.taipei/open-api/zh-tw/Attractions/All?page=${page}`,settings)
+// };
 
 /***/ }),
 
@@ -141,8 +135,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd_lib_tag__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_tag__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../routes */ "./routes.js");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_8__);
 
@@ -151,6 +145,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _jsxFileName = "D:\\Dora\\travel-blog-next\\components\\card.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
@@ -161,17 +156,30 @@ const CardModule = ({
   defultData
 }) => {
   const Attractions = defultData || [];
-  return __jsx("div", null, Attractions.map(item => __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, Attractions.map(item => __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_1___default.a, {
     span: 8,
     md: 8,
     sm: 12,
     xs: 24,
-    className: "mb-50"
-  }, __jsx(_routes__WEBPACK_IMPORTED_MODULE_7__["Link"], {
-    route: "view",
-    params: {
-      id: item.id
-    }
+    className: "mb-50",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+    href: `/view/${item.id}`,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
   }, __jsx(antd_lib_card__WEBPACK_IMPORTED_MODULE_3___default.a, {
     hoverable: true,
     key: item.id,
@@ -179,22 +187,73 @@ const CardModule = ({
     className: "card mb-50 content-ellipsis",
     cover: __jsx("img", {
       alt: item.name,
-      src: item.images[0] ? item.images[0].src : ''
-    })
-  }, __jsx("ul", null, __jsx("li", {
-    className: "content-ellipsis"
+      src: item.images[0] ? item.images[0].src : '',
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: undefined
+    }),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, __jsx("li", {
+    className: "content-ellipsis",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
   }, __jsx("span", {
-    className: "content-p"
+    className: "content-p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
   }, "\u666F\u9EDE\u5730\u5740:"), item.address), __jsx("li", {
-    className: "content-ellipsis"
+    className: "content-ellipsis",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
   }, __jsx("span", {
-    className: "content-p"
+    className: "content-p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
   }, "\u71DF\u696D\u6642\u9593:"), item.open_time ? item.open_time : '無'), __jsx("li", {
-    className: "content-ellipsis"
+    className: "content-ellipsis",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: undefined
   }, __jsx("span", {
-    className: "content-p"
+    className: "content-p",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
   }, "\u666F\u9EDE\u5206\u985E:"), item.category.map(e => __jsx(antd_lib_tag__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    color: "magenta"
+    color: "magenta",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
   }, e.name)))))))));
 };
 
@@ -506,11 +565,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/actions */ "./store/actions.js");
-/* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../api/index */ "./api/index.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../api/index */ "./api/index.js");
+/* harmony import */ var _api_index__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_api_index__WEBPACK_IMPORTED_MODULE_6__);
 
 
+var _jsxFileName = "D:\\Dora\\travel-blog-next\\components\\pagination.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
 
 
 
@@ -519,17 +583,37 @@ const PaginationModule = ({
   current,
   onChangeEvent
 }) => {
-  return __jsx("div", null, __jsx(antd_lib_pagination__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx(antd_lib_pagination__WEBPACK_IMPORTED_MODULE_1___default.a, {
     defaultCurrent: current,
     defaultPageSize: 30,
     onChange: onChangeEvent,
-    total: 430
+    total: 430,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
   }));
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onChangeEvent: event => dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_4__["updateData"])())
+    onChangeEvent: event => {
+      console.log('event', event);
+      dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_4__["updateData"])(event));
+      next_router__WEBPACK_IMPORTED_MODULE_5___default.a.push({
+        pathname: '/',
+        query: {
+          page: event
+        }
+      });
+    }
   };
 };
 
@@ -2441,6 +2525,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_Main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../layout/Main */ "./layout/Main.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/actions */ "./store/actions.js");
 /* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/counter */ "./components/counter.js");
+var _jsxFileName = "D:\\Dora\\travel-blog-next\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  // import { Pagination, BackTop } from 'antd';
@@ -2452,46 +2537,44 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-class Index extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  static async getInitialProps(props) {
-    const {
-      store,
-      isServer
-    } = props.ctx;
+const HomePage = () => {
+  return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: undefined
+  }), __jsx(_components_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: "Index Page",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }));
+};
 
-    if (!store.getState().defultData) {
-      store.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_6__["loadData"])());
-    }
+HomePage.getInitialProps = props => {
+  const {
+    store,
+    isServer
+  } = props.ctx; // console.log(store.getState().defultData);
+  // if (!store.getState().defultData) {
 
-    return {
-      isServer
-    };
-  }
+  store.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_6__["loadData"])()); // }
 
-  render() {
-    return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_5__["default"], null, __jsx(_components_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      title: "Index Page"
-    }), __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_4__["default"], null));
-  }
+  return {
+    isServer
+  };
+};
 
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])()(Index));
-
-/***/ }),
-
-/***/ "./routes.js":
-/*!*******************!*\
-  !*** ./routes.js ***!
-  \*******************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-const nextRoutes = __webpack_require__(/*! next-routes */ "next-routes");
-
-const routes = module.exports = nextRoutes();
-routes.add('index', '/');
-routes.add('view', '/view/:id');
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])()(HomePage));
 
 /***/ }),
 
@@ -2542,9 +2625,10 @@ function reset() {
     type: actionTypes.RESET
   };
 }
-function updateData() {
+function updateData(current) {
   return {
-    type: actionTypes.UPDATE_DATA
+    type: actionTypes.UPDATE_DATA,
+    current
   };
 }
 function loadData() {
@@ -2881,25 +2965,14 @@ module.exports = require("core-js/library/fn/weak-map");
 
 /***/ }),
 
-/***/ "isomorphic-fetch":
-/*!***********************************!*\
-  !*** external "isomorphic-fetch" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("isomorphic-fetch");
-
-/***/ }),
-
-/***/ "next-routes":
+/***/ "next/router":
 /*!******************************!*\
-  !*** external "next-routes" ***!
+  !*** external "next/router" ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("next-routes");
+module.exports = require("next/router");
 
 /***/ }),
 
