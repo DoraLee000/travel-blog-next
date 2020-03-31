@@ -145,11 +145,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-<<<<<<< HEAD
 var _jsxFileName = "D:\\Dora\\travel-blog-next\\components\\card.js";
-=======
-var _jsxFileName = "E:\\travel-blog-next\\components\\card.js";
->>>>>>> ce9322fc76f09e84da691b0e85fbab040b95cb53
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
@@ -294,93 +290,54 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _jsxFileName = "D:\\Dora\\travel-blog-next\\components\\carousel.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 const Index = () => {
   return __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_1___default.a, {
     justify: "space-around",
-    type: "flex"
+    type: "flex",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: undefined
   }, __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_3___default.a, {
     span: 24,
-    className: "carousel mb-50"
+    className: "carousel mb-50",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
   }, __jsx(antd_lib_carousel__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    autoplay: true
-  }, __jsx("div", null, __jsx("h3", null, __jsx("img", {
-    src: "/static/images/12.jpg"
+    autoplay: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("img", {
+    src: "/static/images/12.jpg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
   }))))));
-<<<<<<< HEAD
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Index);
-
-/***/ }),
-
-/***/ "./components/counter.js":
-/*!*******************************!*\
-  !*** ./components/counter.js ***!
-  \*******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store/actions */ "./store/actions.js");
-
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-
-
-
-class Counter extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
-  constructor(...args) {
-    super(...args);
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "increment", () => {
-      this.props.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_4__["increment"])());
-    });
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "decrement", () => {
-      this.props.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_4__["decrement"])());
-    });
-
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "reset", () => {
-      this.props.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_4__["reset"])());
-    });
-  }
-
-  render() {
-    const {
-      count
-    } = this.props;
-    return __jsx("div", {
-      className: "jsx-2435724200"
-    }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      id: "2435724200"
-    }, "div.jsx-2435724200{padding:0 0 20px 0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6XFxEb3JhXFx0cmF2ZWwtYmxvZy1uZXh0XFxjb21wb25lbnRzXFxjb3VudGVyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXFCb0IsQUFHZ0MsbUJBQ3JCIiwiZmlsZSI6IkQ6XFxEb3JhXFx0cmF2ZWwtYmxvZy1uZXh0XFxjb21wb25lbnRzXFxjb3VudGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gJ3JlYWN0J1xyXG5pbXBvcnQgeyBjb25uZWN0IH0gZnJvbSAncmVhY3QtcmVkdXgnXHJcbmltcG9ydCB7IGluY3JlbWVudCwgZGVjcmVtZW50LCByZXNldCB9IGZyb20gJy4uL3N0b3JlL2FjdGlvbnMnXHJcblxyXG5jbGFzcyBDb3VudGVyIGV4dGVuZHMgQ29tcG9uZW50IHtcclxuICBpbmNyZW1lbnQgPSAoKSA9PiB7XHJcbiAgICB0aGlzLnByb3BzLmRpc3BhdGNoKGluY3JlbWVudCgpKVxyXG4gIH1cclxuXHJcbiAgZGVjcmVtZW50ID0gKCkgPT4ge1xyXG4gICAgdGhpcy5wcm9wcy5kaXNwYXRjaChkZWNyZW1lbnQoKSlcclxuICB9XHJcblxyXG4gIHJlc2V0ID0gKCkgPT4ge1xyXG4gICAgdGhpcy5wcm9wcy5kaXNwYXRjaChyZXNldCgpKVxyXG4gIH1cclxuXHJcbiAgcmVuZGVyKCkge1xyXG4gICAgY29uc3QgeyBjb3VudCB9ID0gdGhpcy5wcm9wc1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgPGRpdj5cclxuICAgICAgICA8c3R5bGUganN4PntgXHJcbiAgICAgICAgICBkaXYge1xyXG4gICAgICAgICAgICBwYWRkaW5nOiAwIDAgMjBweCAwO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgIGB9PC9zdHlsZT5cclxuICAgICAgICA8aDE+XHJcbiAgICAgICAgICBDb3VudDogPHNwYW4+e2NvdW50fTwvc3Bhbj5cclxuICAgICAgICA8L2gxPlxyXG4gICAgICAgIDxidXR0b24gb25DbGljaz17dGhpcy5pbmNyZW1lbnR9PisxPC9idXR0b24+XHJcbiAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXt0aGlzLmRlY3JlbWVudH0+LTE8L2J1dHRvbj5cclxuICAgICAgICA8YnV0dG9uIG9uQ2xpY2s9e3RoaXMucmVzZXR9PlJlc2V0PC9idXR0b24+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgKVxyXG4gIH1cclxufVxyXG5cclxuY29uc3QgbWFwU3RhdGVUb1Byb3BzID0gKHsgY291bnQgfSkgPT4gKHsgY291bnQgfSlcclxuZXhwb3J0IGRlZmF1bHQgY29ubmVjdChtYXBTdGF0ZVRvUHJvcHMpKENvdW50ZXIpIl19 */\n/*@ sourceURL=D:\\\\Dora\\\\travel-blog-next\\\\components\\\\counter.js */"), __jsx("h1", {
-      className: "jsx-2435724200"
-    }, "Count: ", __jsx("span", {
-      className: "jsx-2435724200"
-    }, count)), __jsx("button", {
-      onClick: this.increment,
-      className: "jsx-2435724200"
-    }, "+1"), __jsx("button", {
-      onClick: this.decrement,
-      className: "jsx-2435724200"
-    }, "-1"), __jsx("button", {
-      onClick: this.reset,
-      className: "jsx-2435724200"
-    }, "Reset"));
-  }
-=======
 }; // <div>
 // <h3>
 //   <img src="/static/images/big-images-2.jpg" />
@@ -391,7 +348,6 @@ class Counter extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
 //   <img src="/static/images/big-images-3.jpg" />
 // </h3>
 // </div>
->>>>>>> ce9322fc76f09e84da691b0e85fbab040b95cb53
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
@@ -2500,15 +2456,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pagination__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/pagination */ "./components/pagination.js");
 /* harmony import */ var _layout_Main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../layout/Main */ "./layout/Main.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/actions */ "./store/actions.js");
-<<<<<<< HEAD
-/* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/counter */ "./components/counter.js");
 var _jsxFileName = "D:\\Dora\\travel-blog-next\\pages\\index.js";
-=======
-var _jsxFileName = "E:\\travel-blog-next\\pages\\index.js";
->>>>>>> ce9322fc76f09e84da691b0e85fbab040b95cb53
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
- // import { Pagination, BackTop } from 'antd';
 
 
 
@@ -2520,20 +2470,20 @@ const HomePage = () => {
   return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
     },
     __self: undefined
   }, __jsx(_components_pagination__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 13
     },
     __self: undefined
   }), __jsx(_components_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
     title: "Index Page",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 14
     },
     __self: undefined
   }));
@@ -2546,7 +2496,8 @@ HomePage.getInitialProps = props => {
   } = props.ctx; // console.log(store.getState().defultData);
   // if (!store.getState().defultData) {
 
-  store.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_6__["loadData"])()); // }
+  store.dispatch(Object(_store_actions__WEBPACK_IMPORTED_MODULE_6__["loadData"])());
+  console.log(true); // }
 
   return {
     isServer
@@ -2631,11 +2582,7 @@ function loadDataSuccess(data) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! D:\Dora\travel-blog-next\pages\index.js */"./pages/index.js");
-=======
-module.exports = __webpack_require__(/*! E:\travel-blog-next\pages\index.js */"./pages/index.js");
->>>>>>> ce9322fc76f09e84da691b0e85fbab040b95cb53
 
 
 /***/ }),

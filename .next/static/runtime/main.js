@@ -4861,11 +4861,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-<<<<<<< HEAD
       (0, _sourceMapSupport.rewriteStacktrace)(error, "D:\\Dora\\travel-blog-next\\.next");
-=======
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "E:\\travel-blog-next\\.next");
->>>>>>> ce9322fc76f09e84da691b0e85fbab040b95cb53
       return error;
     }
   };

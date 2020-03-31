@@ -2129,12 +2129,11 @@ const current = state => state.current;
 
 function* loadDataSaga() {
   try {
-    //const res = yield fetch('https://jsonplaceholder.typicode.com/users')
-    let currentNum = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["select"])(current);
-    console.log('project66', currentNum);
-    const res = yield fetch(`/api/attractions`, {
-      page: 6
-    });
+    // Server-side render can print out "project"
+    let project = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["select"])(current);
+    console.log('project', project); // Why doesn't server-side render get into the yield fetch('/API /attractions')?
+
+    const res = yield fetch(`/api/attractions`);
     const data = yield res.json();
     yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])(Object(_actions__WEBPACK_IMPORTED_MODULE_2__["loadDataSuccess"])(data.data));
   } catch (err) {

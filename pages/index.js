@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-// import { Pagination, BackTop } from 'antd';
 import Link from "next/link";
 import CardList from "../components/card";
 import Pagination from "../components/pagination";
@@ -22,6 +21,7 @@ HomePage.getInitialProps = props => {
   // console.log(store.getState().defultData);
   // if (!store.getState().defultData) {
   store.dispatch(loadData());
+  console.log(typeof window === "undefined")
   // }
   return { isServer };
 };

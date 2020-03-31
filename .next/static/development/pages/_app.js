@@ -15043,7 +15043,7 @@ var current = function current(state) {
 };
 
 function loadDataSaga() {
-  var currentNum, res, data;
+  var project, res, data;
   return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function loadDataSaga$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
@@ -15053,12 +15053,11 @@ function loadDataSaga() {
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["select"])(current);
 
         case 3:
-          currentNum = _context.sent;
-          console.log('project66', currentNum);
+          project = _context.sent;
+          console.log('project', project); // Why doesn't server-side render get into the yield fetch('/API /attractions')?
+
           _context.next = 7;
-          return fetch("/api/attractions", {
-            page: 6
-          });
+          return fetch("/api/attractions");
 
         case 7:
           res = _context.sent;

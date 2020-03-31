@@ -2,14 +2,15 @@ import { all, call, select, put, takeLatest, takeEvery } from 'redux-saga/effect
 import { getPosts } from '../api/index';
 import { actionTypes, failure, loadDataSuccess } from './actions';
 
-
 export const current = (state) => state.current
 
 function* loadDataSaga() {
   try {
-    //const res = yield fetch('https://jsonplaceholder.typicode.com/users')
-    let project = yield select(getProject)
+    // Server-side render can print out "project"
+    let project = yield select(current)
     console.log('project', project)
+
+    // Why doesn't server-side render get into the yield fetch('/API /attractions')?
     const res = yield fetch(`/api/attractions`);
     const data = yield res.json()
     yield put(loadDataSuccess(data.data))

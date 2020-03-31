@@ -46,7 +46,6 @@ function reducer(state = exampleInitialState, action) {
         ...{ defultData: action.data },
       }
 
-
     default:
       return state
   }
