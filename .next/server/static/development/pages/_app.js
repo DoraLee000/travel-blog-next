@@ -2143,10 +2143,7 @@ function* loadDataSaga() {
 }
 
 function* rootSaga() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_actions__WEBPACK_IMPORTED_MODULE_2__["actionTypes"].LOAD_DATA, loadDataSaga), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_actions__WEBPACK_IMPORTED_MODULE_2__["actionTypes"].UPDATE_DATA, loadDataSaga)]); // yield [
-  //   takeEvery (actionTypes.LOAD_DATA, loadDataSaga),
-  //   takeEvery (actionTypes.UPDATE_DATA, loadDataSaga)
-  // ]
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeLatest"])(_actions__WEBPACK_IMPORTED_MODULE_2__["actionTypes"].LOAD_DATA, loadDataSaga), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_actions__WEBPACK_IMPORTED_MODULE_2__["actionTypes"].UPDATE_DATA, loadDataSaga)]);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (rootSaga);

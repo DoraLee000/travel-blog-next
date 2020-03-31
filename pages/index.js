@@ -6,12 +6,11 @@ import CardList from "../components/card";
 import Pagination from "../components/pagination";
 import Layout from "../layout/Main";
 import { loadData } from "../store/actions";
-import Counter from "../components/counter";
+// import Counter from "../components/counter";
 
 const HomePage = () => {
   return (
     <Layout>
-      {/* <Counter /> */}
       <Pagination />
       <CardList title="Index Page" />
     </Layout>
@@ -22,7 +21,7 @@ HomePage.getInitialProps = props => {
   const { store, isServer } = props.ctx;
   // console.log(store.getState().defultData);
   // if (!store.getState().defultData) {
-    store.dispatch(loadData());
+  store.dispatch(loadData());
   // }
   return { isServer };
 };

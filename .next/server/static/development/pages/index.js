@@ -145,7 +145,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+<<<<<<< HEAD
 var _jsxFileName = "D:\\Dora\\travel-blog-next\\components\\card.js";
+=======
+var _jsxFileName = "E:\\travel-blog-next\\components\\card.js";
+>>>>>>> ce9322fc76f09e84da691b0e85fbab040b95cb53
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
@@ -303,12 +307,9 @@ const Index = () => {
   }, __jsx(antd_lib_carousel__WEBPACK_IMPORTED_MODULE_5___default.a, {
     autoplay: true
   }, __jsx("div", null, __jsx("h3", null, __jsx("img", {
-    src: "/static/images/big-images.jpg"
-  }))), __jsx("div", null, __jsx("h3", null, __jsx("img", {
-    src: "/static/images/big-images-2.jpg"
-  }))), __jsx("div", null, __jsx("h3", null, __jsx("img", {
-    src: "/static/images/big-images-3.jpg"
+    src: "/static/images/12.jpg"
   }))))));
+<<<<<<< HEAD
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
@@ -379,16 +380,21 @@ class Counter extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
       className: "jsx-2435724200"
     }, "Reset"));
   }
+=======
+}; // <div>
+// <h3>
+//   <img src="/static/images/big-images-2.jpg" />
+// </h3>
+// </div>
+// <div>
+// <h3>
+//   <img src="/static/images/big-images-3.jpg" />
+// </h3>
+// </div>
+>>>>>>> ce9322fc76f09e84da691b0e85fbab040b95cb53
 
-}
 
-const mapStateToProps = ({
-  count
-}) => ({
-  count
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps)(Counter));
+/* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
@@ -791,36 +797,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/weak-map */ "core-js/library/fn/weak-map");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
 
 /***/ }),
 
@@ -2524,8 +2500,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pagination__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/pagination */ "./components/pagination.js");
 /* harmony import */ var _layout_Main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../layout/Main */ "./layout/Main.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/actions */ "./store/actions.js");
+<<<<<<< HEAD
 /* harmony import */ var _components_counter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/counter */ "./components/counter.js");
 var _jsxFileName = "D:\\Dora\\travel-blog-next\\pages\\index.js";
+=======
+var _jsxFileName = "E:\\travel-blog-next\\pages\\index.js";
+>>>>>>> ce9322fc76f09e84da691b0e85fbab040b95cb53
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  // import { Pagination, BackTop } from 'antd';
@@ -2534,8 +2514,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-
+ // import Counter from "../components/counter";
 
 const HomePage = () => {
   return __jsx(_layout_Main__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -2652,7 +2631,11 @@ function loadDataSuccess(data) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! D:\Dora\travel-blog-next\pages\index.js */"./pages/index.js");
+=======
+module.exports = __webpack_require__(/*! E:\travel-blog-next\pages\index.js */"./pages/index.js");
+>>>>>>> ce9322fc76f09e84da691b0e85fbab040b95cb53
 
 
 /***/ }),
@@ -3028,17 +3011,6 @@ module.exports = require("react-is");
 /***/ (function(module, exports) {
 
 module.exports = require("react-redux");
-
-/***/ }),
-
-/***/ "styled-jsx/style":
-/*!***********************************!*\
-  !*** external "styled-jsx/style" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("styled-jsx/style");
 
 /***/ }),
 
